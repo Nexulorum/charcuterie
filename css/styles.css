@@ -454,7 +454,7 @@
     content:"";
     position:absolute;
     inset:-12%; /* extra so it can move without showing edges */
-    background: url("/images/Screenshot\ 2026-01-25\ 193001.webp") center / cover no-repeat;
+    background: url("../images/Screenshot\ 2026-01-25\ 193001.webp") center / cover no-repeat;
     transform: translate3d(0, 0, 0);
     will-change: transform;
   }
