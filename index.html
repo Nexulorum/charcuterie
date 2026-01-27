@@ -33,7 +33,6 @@
 
         <div class="topbar-social" aria-label="Social">
           <a href="#" aria-label="Instagram" class="social-link">
-            <!-- Instagram SVG -->
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 7.4A2.9 2.9 0 1 1 14.9 12 2.9 2.9 0 0 1 12 14.9zM17.8 6.2a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/>
             </svg>
@@ -52,9 +51,23 @@
           </a>
         </div>
 
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu" hidden>
+        <a href="boards.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="about.html">About</a>
       </div>
     </div>
   </header>
+
 
 
   <main>
@@ -79,7 +92,7 @@
 <!--side by side -->
     <section class="feature-grid">
       <!-- Tile 1: Rotating images -->
-      <div class="tile tile-media">
+      <div class="tile tile-media tile-media-1">
         <div class="rotator" data-rotator>
           <img class="rotator-img is-active" src="images/Screenshot 2026-01-25 185921.webp" alt="Charcuterie board" />
           <img class="rotator-img" src="images/Screenshot 2026-01-25 192927.webp" alt="Charcuterie board" />
@@ -88,7 +101,7 @@
       </div>
 
       <!-- Tile 2: About -->
-      <div class="tile tile-content">
+      <div class="tile tile-content tile-about">
         <h2 class="tile-title">About</h2>
         <div class="tile-rule"></div>
         <p class="tile-text">
@@ -98,7 +111,7 @@
       </div>
 
       <!-- Tile 3: Events / Parties -->
-      <div class="tile tile-content">
+      <div class="tile tile-content tile-events">
         <h2 class="tile-title">Events</h2>
         <div class="tile-rule"></div>
         <p class="tile-text">
@@ -108,7 +121,7 @@
       </div>
 
       <!-- Tile 4: Rotating images -->
-      <div class="tile tile-media">
+      <div class="tile tile-media tile-media-2">
         <div class="rotator" data-rotator>
           <img class="rotator-img is-active" src="images/Screenshot 2026-01-25 185944.webp" alt="Charcuterie box" />
           <img class="rotator-img" src="images/Screenshot 2026-01-25 190116.webp" alt="Charcuterie box" />
@@ -118,19 +131,52 @@
     </section>
 
 <!--CTA Banner -->
-    <section>
-      <div class="cta-banner">
-        <div class="cta-inner">
-          <h2>Order Pickup or Delivery</h2>
-          <h3>Need orderves for the office or special event?</h3>
-          <h4>charcutorie boards at the push of a button</h4>
-          <div class="cta-actions">
-            <a class="btn btn-ghost" href="order.html">Pickup</a>
-            <a class="btn btn-ghost" href="order.html">Delivery</a>
+
+    <div class="cta-banner">
+      <div class="cta-inner">
+        <h2>Order Pickup or Delivery</h2>
+        <h3>On the go or office party?</h3>
+        <div class="cta-actions">
+          <div class="gc-order">
+            <div class="gc-toggle" role="tablist" aria-label="Order mode">
+              <button class="gc-tab is-active" type="button" data-mode="delivery" aria-selected="true">
+                <span class="gc-ico" aria-hidden="true">🚚</span> Delivery
+              </button>
+              <button class="gc-tab" type="button" data-mode="pickup" aria-selected="false">
+                <span class="gc-ico" aria-hidden="true">🛍️</span> Pickup
+              </button>
+            </div>
+
+            <div class="gc-rows" data-panel="delivery">
+              <a class="gc-row" href="order.html#delivery">
+                <span class="gc-row-ico" aria-hidden="true">📍</span>
+                <span class="gc-row-text">Deliver to <strong>St. Charles, MO</strong></span>
+                <span class="gc-arrow" aria-hidden="true">›</span>
+              </a>
+              <a class="gc-row" href="order.html#schedule">
+                <span class="gc-row-ico" aria-hidden="true">🕒</span>
+                <span class="gc-row-text">Schedule your order for later</span>
+                <span class="gc-arrow" aria-hidden="true">›</span>
+              </a>
+            </div>
+
+            <div class="gc-rows" data-panel="pickup" hidden>
+              <a class="gc-row" href="order.html#pickup">
+                <span class="gc-row-ico" aria-hidden="true">📍</span>
+                <span class="gc-row-text">Pickup from <strong>St. Louis </strong></span>
+                <span class="gc-arrow" aria-hidden="true">›</span>
+              </a>
+              <a class="gc-row" href="order.html#schedule">
+                <span class="gc-row-ico" aria-hidden="true">🕒</span>
+                <span class="gc-row-text">Schedule your order for later</span>
+                <span class="gc-arrow" aria-hidden="true">›</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
 
 
 <!--Photo background-->
@@ -144,20 +190,9 @@
         <p class="section-subtitle">Simple options, premium presentation, zero stress.</p>
 
         <div class="grid-3">
-          <article class="card">
-            <h3>Personal box</h3>
-            <p class="muted">1 people • Great for grab and go snack</p>
-            <ul class="list">
-              <li>Curated cheese + meat selection</li>
-              <li>Fruit, crackers, and extras</li>
-              <li>Beautiful styling included</li>
-            </ul>
-            <a class="btn btn-ghost" href="boards.html">See details</a>
-          </article>
-
           <article class="card board-card">
             <div class="card-media">
-              <img src="/images/boards/personal-box.webp" alt="Personal box charcuterie" loading="lazy">
+              <img src="../images/fruit_waffle.webp" alt="Personal box charcuterie" loading="lazy">
               <span class="price-pill">Starting at $25</span>
             </div>
 
@@ -169,50 +204,88 @@
                 <li>Fruit, crackers, and extras</li>
                 <li>Beautiful styling included</li>
               </ul>
-              <a class="btn btn-ghost" href="boards.html">See details</a>
+              <a class="btn" href="boards.html">See details</a>
             </div>
           </article>
 
-          <article class="card">
-            <h3>Group date box</h3>
-            <p class="muted">4 people • Most popular</p>
-            <ul class="list">
-              <li>More variety + seasonal additions</li>
-              <li>Spreads and elevated textures</li>
-              <li>Perfect for small gatherings</li>
-            </ul>
-            <a class="btn" href="boards.html">See details</a>
+          <article class="card board-card">
+            <div class="card-media">
+              <img src="../images/fruit_waffle.webp" alt="Personal box charcuterie" loading="lazy">
+              <span class="price-pill">Starting at $25</span>
+            </div>
+            <div  class="card-body">
+              <h3>Date box</h3>
+              <p class="muted">2 people • Great for date night</p>
+              <ul class="list">
+                <li>Curated cheese + meat selection</li>
+                <li>Fruit, crackers, and extras</li>
+                <li>Beautiful styling included</li>
+              </ul>
+              <a class="btn" href="boards.html">See details</a>
+            </div>
           </article>
 
-          <article class="card">
+          <article class="card board-card">
+            <div class="card-media">
+              <img src="../images/fruit_waffle.webp" alt="Personal box charcuterie" loading="lazy">
+              <span class="price-pill">Starting at $25</span>
+            </div>
+            <div  class="card-body">
+              <h3>Group date box</h3>
+              <p class="muted">4 people • Most popular</p>
+              <ul class="list">
+                <li>More variety + seasonal additions</li>
+                <li>Spreads and elevated textures</li>
+                <li>Perfect for small gatherings</li>
+              </ul>
+              <a class="btn" href="boards.html">See details</a>
+            </div>
+          </article>
+
+          <article class="card board-card">
+            <div class="card-media">
+              <img src="../images/fruit_waffle.webp" alt="Personal box charcuterie" loading="lazy">
+              <span class="price-pill">Starting at $25</span>
+            </div>
+            <div  class="card-body">
             <h3>Small box</h3>
-            <p class="muted">10 people • Events & parties</p>
-            <ul class="list">
-              <li>Maximum variety and coverage</li>
-              <li>Looks incredible on a table</li>
-              <li>Optional premium additions</li>
-            </ul>
-            <a class="btn btn-ghost" href="boards.html">See details</a>
+              <p class="muted">10 people • Events & parties</p>
+              <ul class="list">
+                <li>Maximum variety and coverage</li>
+                <li>Looks incredible on a table</li>
+                <li>Optional premium additions</li>
+              </ul>
+              <a class="btn" href="boards.html">See details</a>
           </article>
-          <article class="card">
+          <article class="card board-card">
+            <div class="card-media">
+              <img src="../images/fruit_waffle.webp" alt="Personal box charcuterie" loading="lazy">
+              <span class="price-pill">Starting at $25</span>
+            </div>
+            <div  class="card-body">
             <h3>Medium box</h3>
-            <p class="muted">15 people • Events & parties</p>
-            <ul class="list">
-              <li>Maximum variety and coverage</li>
-              <li>Looks incredible on a table</li>
-              <li>Optional premium additions</li>
-            </ul>
-            <a class="btn btn-ghost" href="boards.html">See details</a>
+              <p class="muted">15 people • Events & parties</p>
+              <ul class="list">
+                <li>Maximum variety and coverage</li>
+                <li>Looks incredible on a table</li>
+                <li>Optional premium additions</li>
+              </ul>
+              <a class="btn" href="boards.html">See details</a>
           </article>
-          <article class="card">
-            <h3>Large Board</h3>
-            <p class="muted">20 people • Events & parties</p>
-            <ul class="list">
-              <li>Maximum variety and coverage</li>
-              <li>Looks incredible on a table</li>
-              <li>Optional premium additions</li>
-            </ul>
-            <a class="btn btn-ghost" href="boards.html">See details</a>
+          <article class="card board-card">
+            <div class="card-media">
+              <img src="../images/fruit_waffle.webp" alt="Personal box charcuterie" loading="lazy">
+              <span class="price-pill">Starting at $25</span>
+            </div>
+            <div  class="card-body">
+              <h3>Large Board</h3>
+              <p class="muted">20 people • Events & parties</p>
+              <ul class="list">
+                <li>Maximum variety and coverage</li>
+                <li>Looks incredible on a table</li>
+                <li>Optional premium additions</li>
+              </ul>
+              <a class="btn" href="boards.html">See details</a>
           </article>
         </div>
       </div>
