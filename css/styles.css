@@ -1,6 +1,6 @@
 
     :root{
-    --bg:#071524;          /* ink blue */
+    --bg:#124a85;          /* ink blue */
     --panel: rgba(255,255,255,.04);
     --panel2: rgba(255,255,255,.06);
     --text:#F5F2EA;        /* warm off-white */
@@ -18,15 +18,25 @@
 
     body{
     font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
     background:
-        radial-gradient(900px 520px at 14% 0%, rgba(207,233,214,.12), transparent 58%),
-        radial-gradient(800px 480px at 92% 12%, rgba(212,175,55,.10), transparent 60%),
-        linear-gradient(180deg, #071524 0%, #06101a 60%, #071524 100%);
+      /* NEW: blue presence layer */
+      radial-gradient(900px 520px at 18% 0%, rgba(18,74,133,.40), transparent 60%),
+      radial-gradient(900px 520px at 82% 10%, rgba(18,74,133,.22), transparent 62%),
+
+      /* existing glows */
+      radial-gradient(900px 520px at 14% 0%, rgba(207,233,214,.12), transparent 58%),
+      radial-gradient(800px 480px at 92% 12%, rgba(212,175,55,.10), transparent 60%),
+
+      /* existing base */
+      linear-gradient(180deg, #071524 0%, #06101a 60%, #071524 100%);
+
     color: var(--text);
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    }
+  }
+
 
 
     a{color:inherit;text-decoration:none}
