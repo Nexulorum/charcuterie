@@ -348,7 +348,7 @@
 main{
   position: relative;
   z-index: 1;
-  margin-top: 120px; /* adjust if needed */
+  margin-top: 180px; /* adjust if needed */
 }
 
     .hero-cta{display:flex; gap:12px; margin:22px 0 18px}
