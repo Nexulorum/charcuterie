@@ -1,0 +1,68 @@
+.thanks-page{
+  min-height: 100vh;
+  background:
+    radial-gradient(800px 420px at 15% 0%, rgba(200,155,71,.12), transparent 60%),
+    linear-gradient(180deg, #fbf7f2 0%, #f6f0e7 58%, #efe4d6 100%);
+}
+
+.thanks-hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+}
+
+.thanks-wrap{
+  display: flex;
+  justify-content: center;
+}
+
+.thanks-card{
+  max-width: 640px;
+  text-align: center;
+  padding: 48px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(63,45,36,.10);
+  box-shadow: 0 20px 50px rgba(47,36,28,.10);
+}
+
+.thanks-icon{
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(200,155,71,.15);
+  color: var(--gold);
+  font-size: 22px;
+}
+
+.thanks-card h1{
+  margin-bottom: 12px;
+  font-family: "Fraunces", serif;
+  color: var(--brown-deep);
+}
+
+.thanks-card .lead{
+  color: rgba(47,36,28,.78);
+  margin-bottom: 26px;
+}
+
+.thanks-actions{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px){
+  .thanks-card{
+    padding: 32px 22px;
+  }
+
+  .thanks-hero{
+    padding: 90px 0;
+  }
+}

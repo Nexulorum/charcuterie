@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <style>
+    .main { font-family: 'Georgia', serif; font-weight: 700; }
+    .dark { fill: #36241a; }
+    .gold { fill: #c89b47; }
+  </style>
+
+  <text x="10" y="75" font-size="60" class="main dark">STRO</text>
+  <text x="170" y="75" font-size="60" class="main gold">Graze</text>
+</svg>
