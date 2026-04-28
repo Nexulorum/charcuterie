@@ -301,6 +301,64 @@
 
     .btn-ghost:hover{border-color: rgba(215,180,106,.45)}
 
+    /*==============================
+ mobile button overflow
+==============================*/
+    @media (max-width: 640px){
+
+      .hero-cta,
+      .form-actions,
+      .thanks-actions{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-cta .btn,
+      .hero-cta .btn-ghost,
+      .form-actions .btn,
+      .form-actions .btn-ghost,
+      .thanks-actions .btn,
+      .thanks-actions .btn-ghost{
+        width: min(100%, 230px);
+        max-width: 230px;
+        min-width: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .card .btn,
+      .board-card .btn,
+      .grazing-card .btn,
+      .callout .btn,
+      .tile-btn{
+        width: min(100%, 230px);
+        max-width: 230px;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+}
+    @media (max-width: 640px){
+
+      .hero-cta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* THIS centers them */
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero-cta .btn,
+      .hero-cta .btn-ghost{
+        width: min(100%, 230px);
+        max-width: 230px;
+        text-align: center;
+      }
+
+    }
+
 
     /*====Hero section=====*/
 
@@ -344,12 +402,19 @@
     max-width: 60ch;
     }
 
-    section,
-main{
-  position: relative;
-  z-index: 1;
-  margin-top: 180px; /* adjust if needed */
-}
+
+    main{
+      position: relative;
+      z-index: 1;
+      margin-top: 180px; /* adjust if needed */
+    }
+
+    @media (max-width: 900px){
+      main{
+        
+        margin-top: 0px;
+      }
+    }
 
     .hero-cta{display:flex; gap:12px; margin:22px 0 18px}
 
@@ -1837,7 +1902,7 @@ boards or menu page
   .page-boards .boards-cta-wrap .btn,
   .page-boards .boards-cta-wrap .btn-ghost{
     width: 100%;
-    max-width: 320px;
+    max-width: 230px;
   }
 
   .page-boards .boards-cta-wrap .hero-cta{
@@ -1884,11 +1949,11 @@ boards or menu page
   .page-boards .hero-cta .btn-ghost,
   .page-boards .board-card .btn{
     width: 100%;
-    max-width: 320px;
+    max-width: 230px;
   }
 
   .page-boards .board-card .card-media{
-    height: 220px;
+    height: 190px;
   }
 
   .page-boards .featured-card::before{
@@ -2064,7 +2129,7 @@ about page
   .page-about .hero-cta .btn,
   .page-about .hero-cta .btn-ghost{
     width: 100%;
-    max-width: 320px;
+    max-width: 230px;
   }
 }
 
@@ -2295,7 +2360,7 @@ small phones
 
   .hero-cta{
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
   .btn,
@@ -2303,7 +2368,11 @@ small phones
   .tile-btn,
   .board-card .btn,
   .grazing-card .btn{
-    width: 100%;
+    width: min(100%, 230px);
+    max-width: 230px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .tile{
